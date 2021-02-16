@@ -1,0 +1,31 @@
+.job_filters {
+    background: #EEE;
+    padding: $m-size;
+    margin-bottom: $m-size;
+
+    @include breakpoint($bp-desktop) {
+        margin-bottom: $l-size;
+    }
+}
+
+.job_types {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+    font-size: .83em;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    zoom: 1;
+
+    li {
+        margin: 0;
+        padding: .5em 1em;
+        float: left;
+        border-right: 1px solid #eee;
+    }
+}
+
+.job_types,
+.showing_jobs {
+    margin-top: $m-size !important;
+}

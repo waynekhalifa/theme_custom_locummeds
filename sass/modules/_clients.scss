@@ -1,0 +1,46 @@
+.clients {
+    .entry-content {
+        .register-vacancy-wrap {
+            text-align: right;
+        }
+
+        .section__title {
+            @include breakpoint($bp-desktop) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            background: $purple;
+            color: white;
+            border-radius: .4rem;
+            padding: $s-size $m-size;
+        }
+
+        ul,
+        p {
+            margin-bottom: $m-size;
+        }
+
+        li {
+            color: $gray;
+
+            &::before {
+                content: "\f00c";
+                color: $light-blue;
+                font-family: FontAwesome;
+                margin-right: $m-size;
+            }
+        }
+
+        @include breakpoint($bp-desktop) {
+            background: url('./img/nurse.png') no-repeat 0% 100%;
+    
+            ul,
+            p {
+                padding-left: 46rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "sass-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wani Joseph",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "grunt": "^1.0.2",
+    "grunt-babel": "^8.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-phpmin": "^0.1.3",
+    "grunt-sass": "^2.1.0",
+    "grunt-svgmin": "^6.0.0",
+    "grunt-webpack": "^3.1.3",
+    "load-grunt-tasks": "^5.0.0",
+    "webpack": "^4.35.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6",
+    "counterup2": "^1.0.4",
+    "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^5.1.0",
+    "owl.carousel": "^2.3.4",
+    "waypoints": "^4.0.1"
+  }
+}

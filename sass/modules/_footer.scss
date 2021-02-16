@@ -1,0 +1,125 @@
+.site-footer {
+    background: $dark-blue;
+
+    p {
+        color: rgba($light-blue, .8);
+        font-size: 1.4rem;
+        margin-bottom: $m-size;
+    }
+
+    a {
+        @include link-style(white, rgba($light-blue, .8));
+        font-size: 1.4rem;
+    }
+
+    .social-links {
+        text-align: start;
+    }
+
+    .social-links__item {
+        margin-left: 0;
+        margin-right: .4rem;
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+
+        a {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.footer-wrap {
+    @extend .content-wrap;
+}
+
+.footer-widgets {
+    padding: $l-size 0;
+}
+
+.footer-widget {
+    @include breakpoint($bp-tablet) {
+        min-height: 24rem;
+    }
+
+    &:first-child {
+        a {
+            border: 2px solid rgba($light-blue, .8);
+            border-radius: $l-size;
+            color: white;
+            font-size: 1.6rem;
+            padding: .5rem $l-size;
+            
+            &:hover {
+                background: $main-color;
+                border-color: $main-color;
+            }
+        }
+    }
+
+
+
+    &:nth-child(3) {
+        p:last-of-type {
+            a {
+                color: $main-color;
+    
+                &::after {
+                    font-family: FontAwesome;
+                    content: "\f178";
+                    margin: $s-size;
+                    position: relative;
+                    top: .2rem;
+                }
+    
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.widget__title {
+    color: white;
+    margin: $l-size 0;
+}
+
+.site-info {
+    border-top: 1px solid rgba($light-blue, .3);
+    padding: $m-size 0;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.info {
+    text-align: center;
+    margin-bottom: $m-size;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($bp-tablet) {
+        margin-bottom: 0;
+        &:first-child {
+            text-align: left;
+        }
+    
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    .scroll-up {
+        border: 1px solid white;
+        border-radius: 2px;
+        padding: .4rem $s-size;
+
+        &:hover {
+            background: white;
+        }
+    }
+}

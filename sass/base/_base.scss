@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    color: $main-color;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    @include breakpoint($bp-desktop) {
+        font-size: $m-size;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Asap', sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: $xl-size;
+    @include breakpoint($bp-desktop) {
+        font-size: $xxl-size;
+    }
+}
+
+h2 {
+    font-size: $l-size;
+    @include breakpoint($bp-desktop) {
+        font-size: $xl-size;
+    }
+}
+
+h3 {
+    font-size: 1.8rem;
+    @include breakpoint($bp-desktop) {
+        font-size: $l-size;
+    }
+}
+
+p {
+    color: $gray;
+}
+
+a {
+    font-family: 'Asap', sans-serif;
+    @include link-style($dark-gray, $main-color);
+}
+
+strong {
+    font-weight: 700;
+}
+
+input, 
+textarea {
+    display: inline-block;
+    font: inherit;
+    padding: $s-size $m-size;
+    width: 100%;
+    outline: none;
+    border: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    color: white;
+    background: $main-color;
+}
+
+input[type="file"] {
+    padding: 0;
+    box-shadow: none !important;
+}
+
+select {
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    -ms-appearance: none; /* IE 9 */
+    -o-appearance: none; /* Opera */
+    appearance: none;
+
+    border: none;
+    color: $gray;
+    cursor: pointer;
+    font: inherit;
+    outline: none;
+    display: inline-block;
+    background: white url('./img/dropdown.png') no-repeat 96% center;
+    padding: $s-size $m-size;
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+
+    .placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $gray;
+        cursor: text;
+        padding: $s-size $m-size;
+        width: 100%;
+        z-index: 2;
+
+        label {
+            color: $gray;
+            cursor: text;
+        }
+        span {
+            color: red;
+            cursor: text;
+        }
+    }
+}
+
+.content-wrap {
+    padding: 0 $m-size;
+    @include breakpoint($bp-desktop) {
+        padding: 0;
+        @include container($main-width);
+    }
+    @include breakpoint($l-devices) {
+        @include container($large-width);
+    }
+}
+.icon-wrap {
+    display: inline-block;
+    margin-right: $s-size;
+    width: 30px;
+    height: 30px;
+    background: $green;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.section {
+    margin-top: $l-size;
+    margin-bottom: $l-size;
+    @include breakpoint($bp-desktop) {
+        margin-top: $xl-size;
+        margin-bottom: $xl-size;
+    }
+}
+
+.section__title {
+    margin-bottom: $m-size;
+}
+
+.post-navigation {
+    display: none;
+}
+
+.author {
+    text-transform: capitalize;
+}
+
+.job_application {
+    border: 1px solid darken($light-gray, 10%);
+    padding: $m-size;
+    background: $light-gray;
+
+    input,
+    textarea {
+        border: 1px solid darken($light-gray, 10%);
+        margin-bottom: $m-size;
+    }
+
+    p {
+        margin-bottom: 0 !important;
+    }
+
+    input[type="submit"] {
+        box-shadow: none;
+        border: 1px solid darken($main-color, 10%);
+        margin-bottom: 0;
+    }
+}
+
+.star {
+    color: red;
+}
+
+.wpcf7-not-valid {
+    margin-bottom: 0 !important;
+}
+
+.wpcf7-not-valid-tip {
+    margin-bottom: $m-size !important;
+}
+
+.wpcf7 .wpcf7-form .wpcf7-mail-sent-ok { 
+	display: none !important;
+}

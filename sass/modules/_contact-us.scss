@@ -1,0 +1,43 @@
+.location {
+    @extend .section;
+}
+
+.contact-us {
+    .entry-content {
+        li {
+            color: $gray;
+        }
+
+        a {
+            @include link-style($main-color, $main-color);
+        }
+
+        .wpcf7 {
+            background: $light-gray;
+            box-shadow: 0px 0px 5px 3px rgba(black, .2);
+            padding: $m-size;
+
+            input,
+            select,
+            textarea {
+                box-shadow: 0px 0px 2px 1px rgba(black, .2);
+                margin-bottom: $m-size;
+            }
+
+            input[type="submit"] {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        @include breakpoint($bp-desktop) {
+            p,
+            ul {
+                margin-bottom: $m-size;
+            }
+
+            li {
+                margin-bottom: $s-size;
+            }
+        }
+    }
+}

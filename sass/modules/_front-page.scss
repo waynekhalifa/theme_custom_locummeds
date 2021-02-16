@@ -1,0 +1,19 @@
+.about {
+    @extend .section;
+    p {
+        margin-bottom: $s-size;
+    }
+    
+    @include breakpoint($bp-desktop) {
+        padding: $l-size 0;
+
+        p {
+            max-width: 800px;
+            margin-bottom: $m-size;
+        }
+
+        &.lazyloaded {
+            background: url('./img/about-bg.png') no-repeat center 100%;
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.single-job {
+    li {
+        color: $gray;
+    }
+
+    strong {
+        color: $main-color;
+    }
+
+    h3 {
+        margin: $m-size 0;
+    }
+
+    .job-listing-meta {
+        li {
+            color: $gray;
+            margin: 0;
+            margin-bottom: $s-size;
+            padding: $s-size 0;
+
+            @include breakpoint($bp-tablet) {
+                margin-bottom: $m-size;
+            }
+
+            @include breakpoint(1024px) {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $gray;
+            }
+
+            &.job-type {
+                background: $green;
+                color: white;
+                padding-left: $l-size;
+            }
+
+            &.location {
+                &::before {
+                    font-family: FontAwesome;
+                    content: "\f041";
+                    color: $green;
+                    font-size: $l-size;
+                    line-height: 0;
+                    margin-right: $s-size;
+                }
+            }
+            
+            &.date-posted {
+                &::before {
+                    font-family: FontAwesome;
+                    content: "\f073";
+                    color: $green;
+                    font-size: 1.9rem;
+                    line-height: 0;
+                    margin-right: $s-size;
+                }
+            }
+
+            @include breakpoint($bp-tablet){
+                float: left;
+                padding: $s-size $l-size;
+            }
+        }
+    }
+
+    .section__title {
+        font-family: 'Asap', sans-serif;
+        color: black;
+        font-size: 1.8rem;
+        @include breakpoint($bp-desktop) {
+            font-size: $l-size;
+        }
+    }
+
+    .company {
+        @extend .section;
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: $l-size;
+
+        @include breakpoint($bp-desktop) {
+            padding-bottom: $xl-size;
+        }
+
+        // img {
+        //     display: block;
+        //     float: left;
+        //     height: auto;
+        //     margin-right: $m-size;
+        //     width: $xxl-size;
+
+        //     @include breakpoint($bp-tablet) {
+        //         margin-right: $l-size;
+        //     }
+        // }
+
+        // .name {
+        //     margin-top: $m-size;
+        // }
+
+        .company-logo {
+            background: rgba($green, .1);
+            text-align: center;
+            padding: $xxl-size 0;
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: $xxl-size;
+                height: $xxl-size;
+            }
+        }
+
+        .expire-date {
+            margin-left: $s-size;
+        }
+    }
+
+    .contact-number {
+        font-family: 'Asap', sans-serif;
+        font-size: $m-size;
+        border-bottom: 1px solid darken($light-gray, 10%);
+        padding-bottom: $s-size;
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f098";
+            margin-right: $s-size;
+        }
+
+        @include breakpoint($bp-desktop) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .application_button {
+        background: $main-color;
+        border-radius: 2px;
+        border: 1px solid darken($main-color, 20%);
+        color: white;
+    }
+
+    .call-now,
+    .call-now-mobile {
+        a {
+            background: $green;
+            border-bottom: 3px solid darken($green, 10%);
+            border-radius: 1px;
+            color: white;
+            display: block;
+            font-size: 1.8rem;
+            padding: $s-size;
+            text-align: center;
+            @include breakpoint($bp-desktop){
+                font-size: $l-size;
+            }
+        }
+    }
+    
+    .call-now {
+        display: none;
+
+        @include breakpoint($bp-desktop) {
+            display: block;
+        }
+    }
+
+    .call-now-mobile {
+        margin-bottom: $m-size;
+
+        @include breakpoint ($bp-tablet) {
+            max-width: 300px;
+        }
+        
+        @include breakpoint($bp-desktop) {
+            display: none;
+        }
+    }
+
+    .job_description {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        li {
+            &::before {
+                font-family: FontAwesome;
+                content: "\f111";
+                color: $main-color;
+                font-size: $s-size;
+                margin-right: $s-size;
+            }
+        }
+    }
+
+    .more-info {
+        margin-top: $m-size;
+        a {
+            background: $green;
+            border-bottom: 1px solid darken($green, 10%);
+            border-radius: 1px;
+            color: white;
+            padding: $s-size $l-size;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/*!
+Theme Name: custom-locummeds
+Author: Wani Joseph
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: custom-locummeds
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+// Import external files
+@import "../bower_components/susy/sass/_susy.scss";
+@import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "mixins/variables";
+@import "mixins/clearfix";
+@import "mixins/link-style";
+@import "mixins/transition";
+$susy: (flow: ltr);
+@import "layout/layout";
+@import "base/resets";
+@import "base/base";
+@import "modules/404";
+@import "modules/about-us";
+@import "modules/backdrop";
+@import "modules/breadcrumb";
+@import "modules/campain";
+@import "modules/candidate";
+@import "modules/clients";
+@import "modules/compliance";
+@import "modules/contact-us";
+@import "modules/contact-form";
+@import "modules/header";
+@import "modules/hero";
+@import "modules/hotline";
+@import "modules/loader";
+@import "modules/mail";
+@import "modules/modal";
+@import "modules/filters";
+@import "modules/footer";
+@import "modules/front-page";
+@import "modules/jobs";
+@import "modules/navigation";
+@import "modules/offers";
+@import "modules/page";
+@import "modules/pagination";
+@import "modules/reveal-item";
+@import "modules/services";
+@import "modules/single-job";
+@import "modules/sitemap";
+@import "modules/social-links";
+@import "modules/thank-you";
+@import "modules/testimonials";

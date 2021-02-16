@@ -1,0 +1,87 @@
+.campain {
+    margin-bottom: $l-size;
+
+    .page-title {
+        font-size: $l-size;
+        @include breakpoint($bp-desktop) {
+            font-size: $xl-size;
+        }
+    }
+
+    .entry-content {
+        margin-bottom: 0;
+
+        @include breakpoint($bp-tablet) {
+            margin-bottom: $l-size;
+        }
+
+        ul {
+            padding-left: $l-size;
+        }
+
+        li {
+            color: $gray;
+            list-style: circle;
+            margin-bottom: $s-size;
+            @include breakpoint($bp-tablet) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .contact {
+        margin-top: $m-size;
+
+        @include breakpoint($bp-tablet) {
+            margin-top: $xl-size;
+        }
+
+        .section__content {
+            @extend .job_application;
+
+            select {
+                border: 1px solid darken($light-gray, 10%);
+                margin-bottom: $m-size;
+            }
+        }
+    }
+
+    .call-now {
+        margin-top: $m-size;
+        
+        @include breakpoint($bp-tablet) {
+            margin-top: $xl-size;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            padding: $s-size $m-size;
+            background: $green;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        &.mobile {
+            margin-top: $l-size;
+            
+            @include breakpoint($bp-tablet) {
+                display: none;
+            }
+        }
+
+        &.desktop {
+            display:  none;
+
+            @include breakpoint($bp-tablet) {
+                display: block;
+            }
+        }
+    }
+}

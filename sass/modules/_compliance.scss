@@ -1,0 +1,43 @@
+.nurses,
+.gps {
+    margin-bottom: $l-size;
+    li {
+        color: $gray;
+        margin-bottom: $s-size;
+
+        &::before {
+            content: "\f00c";
+            color: $light-blue;
+            font-family: FontAwesome;
+            margin-right: $m-size;
+        }
+
+        &:first-child {
+            color: black;
+            font-size: $l-size;
+            margin-bottom: $m-size;
+            @include breakpoint($bp-desktop) {
+                font-size: $xl-size;
+            }
+            &::before {
+                content: "";
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.nurses {
+    @include breakpoint($bp-desktop) {
+        background: url('./img/nurse_new_bg.png') no-repeat 100% 100%;
+    }
+}
+
+.gps {
+    @include breakpoint($bp-desktop) {
+        background: url('./img/doctor_new_bg.png') no-repeat 0 100%;
+        // padding-top: 5rem;
+        // padding-bottom: 5rem; 
+        padding-left: 30%;
+    }
+}

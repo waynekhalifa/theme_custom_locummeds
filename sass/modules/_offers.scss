@@ -1,0 +1,54 @@
+.offers {
+    @extend .section;
+}
+
+.offer {
+    margin-bottom: $l-size;
+
+    @include breakpoint($bp-tablet) {
+        margin-bottom: $xl-size;
+        min-height: 30rem;
+    }
+
+    li {
+        color: $gray;
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f068";
+            color: $main-color;
+            margin-right: $s-size;
+        }
+    }
+}
+
+.offer__thumb {
+    margin-bottom: $l-size;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $light-gray;
+    }
+
+    &::before {
+        bottom: -10px;
+    }
+
+    &::after {
+        bottom: -16px;
+    }
+}
+
+.offer__title {
+    margin-bottom: $m-size;
+
+    @include breakpoint($bp-tablet) {
+        margin-bottom: $l-size;
+    }
+}

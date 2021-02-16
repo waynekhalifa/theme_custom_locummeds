@@ -1,0 +1,35 @@
+.modal {
+    background: $light-gray;
+    box-shadow: 0px 0px 5px 3px rgba(black, .2);
+    border-radius: .4rem;
+    display: none;
+    padding: $m-size;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 12;
+
+    @include breakpoint($bp-desktop) {
+        max-width: 800px;
+    }
+    
+    &--is-visible {
+        display: block;
+    }
+}
+
+.request-modal, 
+.refer-modal,
+.send-cv-modal,
+.vacancy-modal,
+.application-modal {
+    display: none;
+
+    &.expanded {
+        background: transparent;
+        box-shadow: none;
+        display: block;
+    }
+}

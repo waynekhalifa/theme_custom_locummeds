@@ -1,0 +1,101 @@
+.topbar {
+    display: none;
+    @include breakpoint($bp-tablet) {
+        display: block;
+        background: $dark-blue;
+        padding: 1rem 0;
+        p {
+            // color: $light-blue;
+            // font-size: 1.4rem;
+            color: white;
+
+            a {
+                @include link-style(white, white);
+            }
+        }
+
+        text-align: end;
+
+        .mail {
+            display: inline-block;
+        }
+
+        .send-cv {
+            margin-left: $m-size;
+            background: white;
+            border-radius: 3px;
+            font-weight: 600;
+            padding: $s-size $l-size;
+            @include link-style(darken($main-color, 20%), darken($main-color, 20%));
+        }
+
+        .call-now {
+            margin-left: $m-size;
+            background: $green;
+            border-radius: 3px;
+            padding: $s-size $l-size;
+            @include link-style(white, white);
+        }
+    }
+}
+
+.site-header {
+    background: white;
+    box-shadow: 1px 0 1px 1px rgba($dark-gray, .2);
+
+    &--stuck {
+        box-shadow: 1px 0 2px 3px rgba($dark-gray, .5);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+.header-wrap {
+    @extend .content-wrap;
+    padding-bottom: $s-size;
+    padding-top: $s-size;
+
+    @include breakpoint($bp-desktop) {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+.site-branding {
+    img {
+        display: block;
+        height: 60px;
+        width: auto;
+    }
+}
+
+.menu__icon {
+    position: absolute;
+    top: $m-size;
+    right: $m-size;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding-top: .5rem;
+    
+    div{
+        width: 100%;
+        height: 5px;
+        margin-bottom: 7px;
+        background: $main-color;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    @include breakpoint($bp-tablet) {
+        top: 5.6rem;
+    }
+    @include breakpoint($bp-desktop) {
+        display: none;
+    }
+
+    &--stuck {
+        top: $m-size;
+    }
+}

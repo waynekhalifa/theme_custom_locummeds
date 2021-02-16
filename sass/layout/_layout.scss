@@ -1,0 +1,488 @@
+//susy configurations
+$susy: (
+	columns: 12,
+	gutters: 0.5,
+	//gutter-position: inside,
+	global-box-sizing: border-box,
+	//output: isolate
+	flow: susy-get(flow)
+);
+
+/*break points*/
+$bp-mobile: 320px; 
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+$l-devices: 1440px;
+
+// $bp-mobile-to-tablet: $bp-mobile $bp-tablet;
+// $bp-tablet-to-desktop: $bp-tablet $bp-desktop;
+
+$main-width: 1200px;
+$large-width: 1360px;
+$no-gatters: (
+	gutters: 0
+);
+
+/*============== Header layout =================*/
+.topbar {
+	@include span(12 of 12);
+}
+.site-header {
+	@include span(12 of 12);
+	@include breakpoint($bp-desktop) {
+		.site-branding {
+			@include span(3 of 12);
+		}
+
+		.main-navigation {
+			@include span(9 of 12 last);
+		}
+	}
+}
+
+/*============== Breadcrumb Layout =============*/
+.breadcrumb,
+.site-main {
+	@include span(12 of 12);
+}
+
+/*============== Social Sharings Layout =============*/
+.social-sharings {
+	@include span(3 of 12 last);
+}
+
+/*============== Footer layout =================*/
+.site-footer {
+	@include span(12 of 12);
+}
+.footer-widgets {
+	@include span(12 of 12);
+	@include breakpoint($bp-tablet) {
+		.footer-widget {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+		}
+	}
+	@include breakpoint($bp-desktop) {
+		.footer-widget {
+			@include span(3 of 12);
+
+			&:nth-child(2n) {
+				@include span(3 of 12);
+			}
+
+			&:last-child {
+				@include span(3 of 12 last);
+			}
+		}
+	}
+}
+.site-info {
+	@include span(12 of 12);
+	@include breakpoint($bp-tablet) {
+		.info {
+			@include span(5 of 12);
+
+			&:nth-child(2) {
+				@include span(2 of 12);
+			}
+
+			&:last-child {
+				@include span(5 of 12 last);
+			}
+		}
+	}
+	@include breakpoint($bp-desktop) {
+		.info {
+			@include span(4 of 12);
+
+			&:nth-child(2) {
+				@include span(4 of 12);
+			}
+
+			&:last-child {
+				@include span(4 of 12 last);
+			}
+		}
+	}
+}
+
+/*============ Page Layout ==============*/
+.entry-header,
+.entry-content,
+.entry-meta {
+	@include span(12 of 12);
+}
+
+
+
+/*============ Hero section Layout ==============*/
+.hero {
+	@include span(12 of 12);
+	.hero__roles {
+		@include span(12 of 12);
+		.role {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+	
+			@include breakpoint($bp-tablet) {
+				@include span(4 of 12);
+	
+				&:nth-child(2n) {
+					@include span(4 of 12);
+				}
+	
+				&:nth-child(3n) {
+					@include span(4 of 12 last);
+				}
+			}
+		}
+    }
+    @include breakpoint($bp-tablet) {
+		.job__search {
+            @include span(12 of 12);
+            
+			.job__search__input {
+				@include span(4.5 of 12)
+            }
+            
+            .job__search__button {
+				@include span(3 of 12 last);
+			}
+		}
+	}
+	@include breakpoint($bp-desktop) {
+		.job__search {
+			@include push(2);
+			@include span(8 of 12);
+
+			.job__search__input {
+				@include span(4.5 of 12)
+            }
+            
+            .job__search__button {
+				@include span(3 of 12 last);
+			}
+		}
+		.hero__actions {
+			@include span(12 of 12);
+		}
+		.hero__roles {
+			.role {
+				@include span(2 of 12);
+
+				&:nth-child(2n),
+				&:nth-child(3n) {
+					@include span(2 of 12);
+				}
+
+				&:last-child {
+					@include span(2 of 12 last);
+				}
+			}
+		}
+	}
+}
+
+/*============ Home page layout ================*/
+
+.services {
+	@include span(12 of 12);
+	@include breakpoint($bp-desktop){
+		@include with-layout($no-gatters) {
+			.service {
+				@include push(0);
+				@include span(4 of 12);
+				&:last-child {
+					@include span(4 of 12 last);
+				}
+			}
+		}
+	}
+}
+
+.about {
+	@include span(12 of 12);
+}
+
+.testimonials {
+	@include span(12 of 12);
+}
+
+/*============= About Page Layout =================*/
+#company-contacts {
+	@include span(12 of 12);
+}
+.company-contacts {
+	@include span(12 of 12);
+	@include breakpoint($bp-tablet) {
+		.company-contact {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+		}
+	}
+	@include breakpoint($bp-desktop) {
+		.company-contact {
+			@include span(4 of 12);
+
+			&:nth-child(2n) {
+				@include span(4 of 12);
+			}
+
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+			}
+		}
+	}
+}
+
+/*============= Compliance Layout ================*/
+.nurses,
+.gps {
+	@include span(12 of 12);
+}
+
+/*============ Contact Us Layout =================*/
+.contact-us {
+	@include span(12 of 12);
+
+	.location {
+		@include span(12 of 12);
+	}
+
+	.contact-form {
+		@include span(12 of 12);
+	}
+
+	@include breakpoint($bp-tablet) {
+		.contact-form {
+			@include span(6 of 12);
+		}
+
+		.entry-content {
+			@include span(6 of 12 last);
+		}
+	}
+}
+
+/*============ Clients Page Layout ==============*/
+.offers {
+	@include span(12 of 12);
+
+	.offer {
+		@include breakpoint($bp-tablet) {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+		}
+		@include breakpoint($bp-desktop) {
+			@include span(4 of 12);
+
+			&:nth-child(2n) {
+				@include span(4 of 12);
+			}
+
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+			}
+		}
+	}
+}
+
+/*=========== Candidate Page Layout =============*/
+.counter-widgets {
+	@include span(12 of 12);
+
+	@include breakpoint($bp-tablet) {
+		.counter-widget {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include span(6 of 12 last);
+			}
+		}
+	}
+
+	@include breakpoint($bp-desktop) {
+		.counter-widget {
+			@include span(4 of 12);
+
+			&:nth-child(2n) {
+				@include span(4 of 12 last);
+			}
+		}
+	}
+}
+
+/*============= Job Filters Layout =============*/
+.job-filters{
+	@include span(12 of 12);
+	// .job_types {
+	// 	@include span(12 of 12);
+	// }
+	// @include breakpoint($bp-desktop) {
+	// 	.job__search__input {
+	// 		@include span(6 of 12);
+
+	// 		&:last-of-type {
+	// 			@include span(6 of 12 last);
+	// 		}
+	// 	}
+    // }
+    @include breakpoint($bp-desktop) {
+        @include span(3 of 12);
+    }
+}
+
+.job_listings {
+	@include span(12 of 12);
+}
+
+.wp-pagenavi {
+    @include span(12 of 12);
+    
+    @include breakpoint($bp-desktop) {
+        @include push(3);
+        @include span(9 of 12);
+    }
+}
+
+/*============= Single Job Listings Layout ================*/
+.single_job {
+	@include span(12 of 12);
+	.company {
+		@include span(12 of 12);
+	}
+	.job_description {
+		@include span(12 of 12);
+	}
+	.more-info {
+		@include span(12 of 12);
+	}
+
+	@include breakpoint(1024px) {
+        .company-logo {
+            @include span(2 of 12);
+        }
+        .company-meta {
+            @include span(7 of 12);
+        }
+		.job_description {
+			@include span(6 of 12);
+        }
+		.job-application {
+			@include span(3.5 of 12);
+        }
+        .call-now {
+            @include span(2.5 of 12 last);
+        }
+	}
+}
+
+/*================ Error 404 Layout ====================*/
+.error-404 {
+	.contact {
+        @include span(12 of 12);
+        
+        @include breakpoint($bp-desktop) {
+            @include span(9 of 12 last);
+        }
+	}
+}
+
+/*=========== Job Listings Layout ==============*/
+.job-listings {
+    @include span(12 of 12);
+
+    .job-listing {
+        @include span(12 of 12);
+    }
+
+    @include breakpoint($bp-tablet) {
+        
+        .company-logo {
+            @include span(2 of 12);
+        }
+
+        .job-description {
+            @include span(7 of 12);
+        }
+
+        .apply-now {
+            @include span(3 of 12 last);
+        }
+    }
+
+    @include breakpoint($bp-desktop) {
+        @include span(9 of 12 last);
+        
+        .company-logo {
+            @include span(2 of 12);
+        }
+
+        .job-description {
+            @include span(8 of 12);
+        }
+
+        .apply-now {
+            @include span(2 of 12 last);
+        }
+    }
+}
+
+/*=============== Campaing Layout ============*/
+.campain {
+    @include span(12 of 12);
+
+    .post-thumbnail {
+        @include span(12 of 12);
+    }
+
+    .entry-content {
+        @include span(12 of 12);
+    }
+
+    .contact {
+        @include span(12 of 12);
+    }
+
+    .call-now {
+        @include span(12 of 12);
+    }
+
+    @include breakpoint($bp-tablet) {
+        
+        .contact {
+            @include span(8 of 12);
+        }
+
+        .call-now {
+            @include span(4 of 12 last);
+        }
+    }
+
+    @include breakpoint($bp-desktop) {
+        .entry-content {
+            @include span(5.5 of 12);
+        }
+
+        .contact {
+            @include span(4.5 of 12);
+        }
+
+        .call-now {
+            @include span(2 of 12 last);
+        }
+    }
+}

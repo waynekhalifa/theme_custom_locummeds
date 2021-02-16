@@ -1,0 +1,85 @@
+.main-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 1px 4px 2px $main-color;
+    transform: translateX(-250px);
+    z-index: 12;
+    @include transition-time(.3s, ease-out);
+
+    &--is-visible {
+        transform: translateX(0);
+    }
+
+    @include breakpoint($bp-desktop) {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+        transform: translateX(0);
+        z-index: 10;
+    }
+    
+    .menu {
+        padding: $m-size;
+        @include breakpoint($bp-desktop) {
+            float: right;
+            padding: 0;
+        }
+    }
+    
+    .menu-item {
+        border-bottom: 1px dashed $main-color;
+        padding: $s-size 0;
+        @include breakpoint($bp-desktop) {
+            border-bottom: none;
+            float: left;
+            padding: 0;
+        }
+    }
+
+    .menu-item > a {
+        @include breakpoint($bp-desktop) {
+            border-bottom: 4px solid transparent;
+            color: darken($color: $main-color, $amount: 40%);
+            display: block;
+            // font-weight: 600;
+            padding: $m-size $m-size;
+    
+            &:hover {
+                border-color: $green;
+            }
+        }
+    }
+    
+    .menu-item:last-child > a {
+        @include breakpoint($bp-desktop) {
+            padding: $m-size 0 $m-size $m-size;
+        }
+    }
+    
+    .current-menu-item > a,
+    .current_page_item > a,
+    .current-menu-ancestor > a,
+    .current_page_ancestor > a {
+        border-color: $green 
+    }
+}
+
+.footer-widget {
+    .menu-item {
+        margin-bottom: $s-size;
+    }
+
+    .current-menu-item > a,
+    .current_page_item > a,
+    .current-menu-ancestor > a,
+    .current_page_ancestor > a {
+        color: $main-color;
+    }
+}

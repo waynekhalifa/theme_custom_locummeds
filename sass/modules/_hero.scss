@@ -1,0 +1,163 @@
+.hero {
+    position: relative;
+    background-image: url('./img/locum-meds-banner-m.png');
+    background-position: center center; 
+    background-size: cover;
+
+    @include breakpoint($bp-tablet) {
+        background-image: url('./img/locum-meds-banner-t.png');
+    }
+
+    @include breakpoint($bp-desktop) {
+        background-image: url('./img/locum-meds-banner-d.png');
+    }
+
+    &--stuck {
+        padding-top: 68px;
+    }
+}
+
+.hero__title {
+    color: white;
+    text-align: center;
+    padding: $xxl-size 0 $m-size 0;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: $l-size;
+    @include breakpoint($bp-desktop) {
+        font-size: $xl-size;
+        padding: 8rem 0 $m-size 0;
+    }
+}
+
+.hero__subTitle {
+    color: darken(white, 5%);
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: $xxl-size;
+    @include breakpoint($bp-desktop) {
+        font-size: $l-size;
+    }
+
+    span {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+.job__search {
+    border-radius: 4px;
+    margin-bottom: $xl-size;
+    @include breakpoint($bp-desktop) {
+        margin-top: $xxl-size;
+        margin-bottom: $m-size;
+    }
+
+    .job__search__button,
+    .job__search__input {
+        @include breakpoint($bp-desktop) {
+            font-size: 1.8rem;
+            padding: $m-size;
+        }
+    }
+}
+
+.job__search__input {
+    border-radius: 3px;
+    margin-bottom: $s-size;
+
+    @include breakpoint($bp-desktop) {
+        margin-bottom: 0;
+    }
+}
+
+.job__search__button {
+    background: lighten($green, 15%) !important;
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+}
+
+.hero__actions {
+    display: inline-block;
+    margin-bottom: $xxl-size;
+    text-align: center;
+    border-radius: 4px;
+    width: fit-content !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint($bp-desktop) {
+        margin-bottom: 8rem;
+    }
+}
+
+.hero__actions a {
+    display: inline-block;
+    background: darken($main-color, 25%);
+    border-radius: 4px;
+    color: white;
+    margin: 0 0 $s-size 0;
+    padding: $s-size $l-size;
+    text-align: center;
+    width: 100%;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($bp-tablet) {
+        margin: $s-size;
+        width: auto;
+    }
+
+    @include breakpoint($bp-desktop) {
+        font-size: 1.8rem;
+        padding: $m-size $xl-size;
+    }
+}
+
+.hero__roles {
+    display: none;
+    @include breakpoint($bp-desktop) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.role {
+    position: relative;
+    height: 256px;
+    overflow: hidden;
+    padding-top: 40px;
+    @include transition-time(.2s, ease-out);
+
+    &:hover {
+        padding-top: 0;
+
+        .role__title {
+            background: darken($green, 20%);
+        }        
+    }
+}
+
+.role__title {
+    background: $main-color;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin-bottom: $m-size;
+    padding: $s-size $m-size;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.hero__roles img {
+    display: block;
+    height: 200px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}

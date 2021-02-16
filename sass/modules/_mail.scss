@@ -1,0 +1,10 @@
+.mail {
+    p {
+        &::before {
+            font-family: FontAwesome;
+            content: "\f0e0";
+            color: white;
+            margin-right: $s-size;
+        }
+    }
+}

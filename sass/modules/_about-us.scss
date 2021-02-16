@@ -1,0 +1,49 @@
+.about-us {
+    .entry-content {
+        @include breakpoint($bp-desktop) {
+            background: url('./img/360_bg.png') no-repeat 100% 100%;
+            padding: $l-size 0;
+    
+            p {
+                max-width: 800px;
+                margin-bottom: $m-size;
+            }
+        }
+    }
+}
+
+#company-contacts {
+    @extend .section;
+
+    h2 {
+        display: inline-block;
+        border-bottom: 2px solid $main-color;
+        padding-bottom: $s-size;
+        margin-bottom: $xl-size;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint($bp-desktop) {
+            margin-bottom: $xxl-size;
+        }
+    }
+}
+
+.company-contact {
+    text-align: center;
+    margin-bottom: $l-size;
+
+    p {
+        margin-bottom: $s-size;
+    }
+
+    @include breakpoint($bp-desktop) {
+        margin-bottom: $xl-size;
+    }
+}
+
+.company-contact__name {
+    font-weight: bold;
+    margin-bottom: $m-size;
+}

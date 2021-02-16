@@ -1,0 +1,70 @@
+.candidate {
+    .entry-content {
+        text-align: right;
+
+        a {
+            display: inline-block;
+            background: $green;
+            color: white;
+            border-radius: .4rem;
+            padding: $s-size $m-size;
+
+            &::after {
+                content: "\f019";
+                font-family: FontAwesome;
+                margin-left: $m-size;
+                color: white;
+            }
+        }
+    }
+
+    .offer {
+        @include breakpoint($bp-tablet) {
+            min-height: 40rem;
+        }
+    }
+}
+
+.counter-widgets {
+    background: url('./img/bg_quote.jpg') no-repeat;
+    background-size: cover; 
+    color: white;
+    padding: $l-size 0;
+}
+
+.counter-widget {
+    text-align: center;
+
+    .counter {
+        font-size: 6.4rem;
+
+        &::before {
+            font-family: FontAwesome;
+            content: "\f073";
+            color: white;
+            display: block;
+            padding: $m-size;
+            font-size: $xxl-size;
+        }
+
+        @include breakpoint($bp-desktop) {
+            font-size: 7.2rem;
+        }
+    }
+
+    &:last-child {
+
+        .counter {
+    
+            &::before {
+                content: "\f017";
+            }
+        }
+    }
+}
+
+.counter-widget__title {
+    display: block;
+    font-size: $xl-size;
+    margin-bottom: $l-size;
+}

@@ -1,0 +1,52 @@
+.thank-you {
+    .banner {
+        position: relative;
+        width: fit-content;
+        margin: $m-size;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @include breakpoint ($bp-desktop) {
+            margin: $m-size auto;
+        }
+    }
+
+    .entry-title {
+        color: $main-color;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        letter-spacing: 2px;
+        width: 100%;
+        transform: translateY(-50%);
+
+        &::after {
+            display: none;
+        }
+    }
+    
+    .content-wrap {
+        text-align: center;
+        font-size: 1.7rem;
+        @include breakpoint($bp-desktop) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .more-jobs {
+        @include link-style(white, white);
+        border-radius: 4px;
+        display: inline-block;
+        padding: $s-size $l-size;
+        background: darken($main-color, 10%);
+        margin-top: $m-size;
+
+        &:hover {
+            background: darken($main-color, 20%);
+        }
+    }
+}

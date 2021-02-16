@@ -1,0 +1,16 @@
+.sitemap {
+    li {
+        margin-bottom: $s-size;
+    }
+    ul {
+        padding-left: $l-size;
+        li {
+            &::before {
+                content: "\f068";
+                color: $light-blue;
+                font-family: FontAwesome;
+                margin-right: $m-size;
+            }
+        }
+    }
+}

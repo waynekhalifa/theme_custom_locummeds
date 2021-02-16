@@ -1,0 +1,10 @@
+.hotline {
+    p {
+        &::before {
+            font-family: FontAwesome;
+            content: "\f098";
+            color: white;
+            margin-right: $s-size;
+        }
+    }
+}
